@@ -8,7 +8,7 @@ function RightComponents() {
             <div className="content">
                 <div className="upperComponent">
                     <p>Another Location</p>
-                    <FontAwesomeIcon icon={solid('search')} size="2x" style={{ backgroundColor: 'rgb(77,117,109)' }} />
+                    <FontAwesomeIcon icon={solid('search')} size="3x" style={{ backgroundColor: 'rgb(77,117,109)' }} />
 
                 </div>
                 <hr style={{ height: "2px", borderWidth: 0, color: "gray", backgroundColor: "gray" }} />
