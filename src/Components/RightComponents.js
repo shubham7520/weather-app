@@ -1,7 +1,7 @@
 import "../Style/RightComponent.css"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { solid} from '@fortawesome/fontawesome-svg-core/import.macro'
 function RightComponents() {
     return (
         <div className="right">

@@ -1,5 +1,16 @@
+
 .left{
     flex:1.8;
     color:white;
-    font-size: large;
+}
+.middlecomponent{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left:100px;
+}
+.paraDiv{
+    display: flex;
+    align-items: baseline;
+    margin: auto 0;
 }

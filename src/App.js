@@ -1,6 +1,6 @@
 import './App.css';
 
-import Image from "./Image/weather.jpg"
+import Image from "./Image/weather2.jpg"
 import { Home, RightComponents } from './Components';
 
 function App() {
