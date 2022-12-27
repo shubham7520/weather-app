@@ -1,7 +1,11 @@
+import "../Style/Home.css"
+import RightComponents from "./RightComponents";
+import LeftComponent from "./LeftComponent";
 function Home() {
     return (
-        <div>
-            Hello World
+        <div className="home">
+            <LeftComponent />
+            <RightComponents />
         </div>
     )
 }
