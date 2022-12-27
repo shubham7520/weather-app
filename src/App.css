@@ -1,7 +1,8 @@
 .App {
-  text-align: center;
+  
   height: 80vh;
   background-repeat: no-repeat;
+  background-position:center;
   background-size:cover;
   width:80vw;
   position: absolute;
