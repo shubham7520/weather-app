@@ -51,3 +51,9 @@ input {
     outline: none;
     background: transparent;
   }
+
+  .clickablePara:hover{
+    cursor: pointer;
+    color: #fff;
+    
+  }

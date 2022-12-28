@@ -9,7 +9,7 @@ export default function LeftComponent({ detail }) {
 
     return (
         <div className="left">
-            <div style={{ position: 'absolute', top: 60, left: 100 }}>monsterBhai.com</div>
+            <div style={{ position: 'absolute', top: 60, left: 100 }}>testWeatherApp.com</div>
             <div className="middlecomponent">
                 <div>
                     <p style={{ fontSize: 100 }}>{Math.floor(detail.main.temp - 273.15)}°</p>
@@ -21,11 +21,11 @@ export default function LeftComponent({ detail }) {
                         <div>{moment().format('lll')}</div>
 
                     </div>
-                    <div>
+                    {/* <div>
                         <FontAwesomeIcon icon={solid('user')} size="2x" />
 
                         <div style={{ marginTop: '6px' }}>Rainy</div>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>

@@ -3,22 +3,24 @@ import "../Style/RightComponent.css"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { useState } from "react";
 function RightComponents(props) {
     const rain = props.detail.rain;
-
+    const [cityname, setcityname] = useState("");
 
     return (
         <div className="right">
-            <FontAwesomeIcon icon={solid('search')} color="rgba(0,0,0,.5)" size="2x" style={{ backgroundColor: 'rgb(130,159,154)', position: 'absolute', right: 0, padding: 16, }} />
+            <FontAwesomeIcon className="clickablePara" icon={solid('search')} color="rgba(0,0,0,.5)" size="2x" style={{ borderTopLeftRadius: 8, borderBottomLeftRadius: 8, backgroundColor: 'rgb(130,159,154)', position: 'absolute', right: 0, padding: 16, }} onClick={() => props.setSearch(cityname)} />
             <div className="content">
                 <div className="upperComponent">
-                    <input className="inputfield" type="text" placeholder="Another Location" />
+                    <input className="inputfield" type="text" placeholder="Another Location" onKeyDown={(e) => { if (e.key === 'Enter') { props.setSearch(cityname) } }} value={cityname} onChange={(e) => { setcityname(e.target.value) }} />
+
                 </div>
                 <div className="middleComponent">
-                    <p>Haridwar</p>
-                    <p>Varanasi</p>
-                    <p>Prayagraj</p>
-                    <p>Patna</p>
+                    <p className="clickablePara" onClick={() => props.setSearch("haridwar")}>Haridwar</p>
+                    <p className="clickablePara" onClick={() => props.setSearch("varanasi")}>Varanasi</p>
+                    <p className="clickablePara" onClick={() => props.setSearch("prayagraj")}>Prayagraj</p>
+                    <p className="clickablePara" onClick={() => props.setSearch("patna")}>Patna</p>
 
                 </div>
                 <hr style={{ height: "2px", borderWidth: 0, color: "gray", backgroundColor: "gray" }} />
@@ -52,6 +54,7 @@ function RightComponents(props) {
             </div>
         </div>
     )
+
 }
 
 
