@@ -19,7 +19,7 @@ function RightComponents(props) {
                 <div className="middleComponent">
                     <p className="clickablePara" onClick={() => props.setSearch("haridwar")}>Haridwar</p>
                     <p className="clickablePara" onClick={() => props.setSearch("varanasi")}>Varanasi</p>
-                    <p className="clickablePara" onClick={() => props.setSearch("prayagraj")}>Prayagraj</p>
+                    <p className="clickablePara" onClick={() => props.setSearch("allahabad")}>Prayagraj</p>
                     <p className="clickablePara" onClick={() => props.setSearch("patna")}>Patna</p>
 
                 </div>
