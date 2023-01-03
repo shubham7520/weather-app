@@ -1,18 +1,20 @@
 import "../Style/LeftComponent.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 import moment from "moment/moment";
 
 
 
-export default function LeftComponent({ detail }) {
-
+export default function LeftComponent({ setGetImage, detail }) {
+    setGetImage(detail.weather[0].main);
     return (
         <div className="left">
-            <div style={{ position: 'absolute', top: 60, left: 100 }}>testWeatherApp.com</div>
+            <div className="weatherConditionLogo">
+                <img id="wicon" src={`https://openweathermap.org/img/wn/${detail.weather[0].icon}@2x.png`} alt="Weather icon" />
+                <div style={{ marginTop: '6px' }}>{detail.weather[0].main.toUpperCase()}</div>
+            </div>
             <div className="middlecomponent">
                 <div>
-                    <p style={{ fontSize: 100 }}>{Math.floor(detail.main.temp - 273.15)}°</p>
+                    <p style={{ fontSize: 100, lineHeight: 0, padding: 0 }}>{Math.floor(detail.main.temp - 273.15)}°</p>
                 </div>
                 <div className="paraDiv">
 
@@ -21,11 +23,6 @@ export default function LeftComponent({ detail }) {
                         <div>{moment().format('lll')}</div>
 
                     </div>
-                    {/* <div>
-                        <FontAwesomeIcon icon={solid('user')} size="2x" />
-
-                        <div style={{ marginTop: '6px' }}>Rainy</div>
-                    </div> */}
                 </div>
 
             </div>

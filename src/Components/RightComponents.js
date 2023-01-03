@@ -10,10 +10,13 @@ function RightComponents(props) {
 
     return (
         <div className="right">
-            <FontAwesomeIcon className="clickablePara" icon={solid('search')} color="rgba(0,0,0,.5)" size="2x" style={{ borderTopLeftRadius: 8, borderBottomLeftRadius: 8, backgroundColor: 'rgb(130,159,154)', position: 'absolute', right: 0, padding: 16, }} onClick={() => props.setSearch(cityname)} />
+            <FontAwesomeIcon className="clickablePara" icon={solid('search')} color="rgba(0,0,0,.5)" size="2x" style={{ borderTopLeftRadius: 8, borderBottomLeftRadius: 8, backgroundColor: 'rgb(130,159,154)', position: 'absolute', right: 0, padding: 16, }} onClick={() => {
+                props.setSearch(cityname)
+                props.setVariableChange(!props.variableChange);
+            }} />
             <div className="content">
                 <div className="upperComponent">
-                    <input className="inputfield" type="text" placeholder="Another Location" onKeyDown={(e) => { if (e.key === 'Enter') { props.setSearch(cityname) } }} value={cityname} onChange={(e) => { setcityname(e.target.value) }} />
+                    <input className="inputfield" type="text" placeholder="Another Location" onKeyDown={(e) => { if (e.key === 'Enter') { props.setSearch(cityname); props.setVariableChange(!props.variableChange) } }} value={cityname} onChange={(e) => { setcityname(e.target.value) }} />
 
                 </div>
                 <div className="middleComponent">
