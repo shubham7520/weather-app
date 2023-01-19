@@ -5,6 +5,7 @@ import moment from "moment/moment";
 
 
 export default function LeftComponent({ setGetImage, detail }) {
+    console.log(detail);
     setGetImage(detail.weather[0].main);
     return (
         <div className="left">
