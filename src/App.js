@@ -1,5 +1,5 @@
 import './App.css';
-import { Home } from './Components';
+import Home from './Components/Home';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -17,7 +17,7 @@ function App(p) {
       setApiData(data.data.hits);
     }
     apiCall();
-  }, [getImage, variableChange])
+  }, [getImage, variableChange]);
   return (
     <div className='outerApp'>
       <div className="App" style={{ backgroundImage: `url(${apiData[num]?.largeImageURL})` }}>

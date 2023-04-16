@@ -2,6 +2,8 @@
     flex: 1;
     backdrop-filter: blur(20px);
     color: rgba(255, 255, 255,.5);
+    background: rgb(70,70,70);
+    background: linear-gradient(104deg, rgba(0,0,0,1) 6%, rgba(86,53,53,.1) 53%, rgba(0, 1, 1,.7) 85%);
 }
 .weatherdetail{
     /* display: flex; */
